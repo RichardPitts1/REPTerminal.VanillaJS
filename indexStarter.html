@@ -1,0 +1,73 @@
+<head>
+    <!-- This is cool, it made this the base reference: -->
+    <!-- <base href="https://www.w3schools.com/" target="_blank"> -->
+    <title>uInvest</title>
+    <script src="typescript/amCore.js"></script>
+    <script src="typescript/amCharts.js"></script>
+    <script src="typescript/amThemes.js"></script>
+  </head>
+  
+  <body>
+    <!-- <h1 class="typingREPtext1" style="text-align: center;">uInvest</h1> -->
+    <!-- I removed a | from the below html-->
+    <h1 class="sz-headline" style="text-align: center;"><span class="typing REPtext1">uInvest</span><span class="typed-cursor typed-cursor--blink"></span></h1>
+
+    <!-- <script src="//www.amcharts.com/lib/4/core.js"></script>
+    <script src="//www.amcharts.com/lib/4/charts.js"></script>
+     -->
+    <div id="chartdiv" style="width: 900px; height 800px; margin: auto"></div>
+    
+    <script>
+    // Create chart instance
+    var chart = am4core.create("chartdiv", am4charts.PieChart);
+    chart.innerRadius = am4core.percent(40);
+
+
+    // Create pie series
+    var series = chart.series.push(new am4charts.PieSeries());
+    series.dataFields.value = "percentage";
+    series.dataFields.category = "sector";
+    
+    // Add data
+    chart.data = [{
+      "sector": "Communication Services",
+      "percentage": 9.9
+    }, {
+      "sector": "Consumer Discretionary",
+      "percentage": 10.2
+    }, {
+      "sector": "Consumer Staples",
+      "percentage": 6.7
+    }, {
+      "sector": "Energy",
+      "percentage": 6.0
+    }, {
+      "sector": "Financials",
+      "percentage": 13.7
+    }, {
+      "sector": "Health Care",
+      "percentage": 14.9
+    }, {
+      "sector": "Industrials",
+      "percentage": 9.7
+    }, {
+      "sector": "Materials",
+      "percentage": 2.5
+    }, {
+      "sector": "Real Estate",
+      "percentage": 2.7
+    }, {
+      "sector": "Technology",
+      "percentage": 20.8
+    },  {
+      "sector": "Utilities",
+      "percentage": 2.8
+    }];
+    
+    // And, for a good measure, let's add a legend
+    chart.legend = new am4charts.Legend();
+    </script>
+    <!-- <script src="typescript/tester.js"></script> -->
+    <script src="typescript/textToType.js"></script>
+    <script src="typescript/typed.min.js"></script>
+  </body>

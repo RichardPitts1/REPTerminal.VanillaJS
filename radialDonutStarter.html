@@ -23,11 +23,26 @@
     chart.innerRadius = am4core.percent(40);
 
 
-    // Create pie series
-    var series = chart.series.push(new am4charts.PieSeries());
-    series.dataFields.value = "percentage";
-    series.dataFields.category = "sector";
+    // Create OLD pie series
+    // var series = chart.series.push(new am4charts.PieSeries());
+    // series.dataFields.value = "percentage";
+    // series.dataFields.category = "sector";
 
+    // create NEW Series
+var pieSeries = chart.series.push(new am4charts.PieSeries());
+pieSeries.dataFields.value = "percentage";
+pieSeries.dataFields.category = "sector";
+pieSeries.innerRadius = am4core.percent(9);
+pieSeries.ticks.template.disabled = false;
+pieSeries.labels.template.disabled = false;
+var rgm = new am4core.RadialGradientModifier();
+rgm.brightnesses.push(-0.8, -0.8, -0.5, 0, - 0.5);
+pieSeries.slices.template.fillModifier = rgm;
+pieSeries.slices.template.strokeModifier = rgm;
+pieSeries.slices.template.strokeOpacity = 0.8;
+pieSeries.slices.template.strokeWidth = 1;
+
+// chart.legend.position = "right";
 
     // Add data
     chart.data = [{
@@ -69,6 +84,8 @@
     chart.legend = new am4charts.Legend();
 
     </script>
+
+
     <!-- <script src="typescript/tester.js"></script> -->
     <script src="typescript/textToType.js"></script>
     <script src="typescript/typed.min.js"></script>

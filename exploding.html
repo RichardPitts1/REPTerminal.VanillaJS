@@ -24,14 +24,21 @@
     // Themes end
     
     var container = am4core.create("chartdiv", am4core.Container);
-    container.width = am4core.percent(100);
+    container.width = am4core.percent(70);
     container.height = am4core.percent(100);
     container.layout = "horizontal";
+
+    // DONUT ATTEMPT
     // This doesn't exactly work because its not a PieChart with a child
     // container.innerRadius = am4core.percent(40)
+
+    // LEGEND ATTEMPT
+    container.legend = new am4charts.Legend();
     
     
     var chart = container.createChild(am4charts.PieChart);
+    chart.legend = new am4charts.Legend()
+    chart.innerRadius = am4core.percent(40)
     
     // Add data
     chart.data = [{

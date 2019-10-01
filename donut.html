@@ -5,6 +5,7 @@
     <script src="typescript/amCore.js"></script>
     <script src="typescript/amCharts.js"></script>
     <script src="typescript/amThemes.js"></script>
+    <!-- <script src="https://www.amcharts.com/lib/4/themes/dark.js"></script> -->
   </head>
   
   <body>
@@ -21,7 +22,9 @@
     // Create chart instance
     var chart = am4core.create("chartdiv", am4charts.PieChart);
     chart.innerRadius = am4core.percent(40);
-
+    // Themes begin
+    // am4core.useTheme(am4themes_dark);
+    // am4core.useTheme(am4themes_animated);
 
     // Create OLD pie series
     // var series = chart.series.push(new am4charts.PieSeries());
@@ -32,15 +35,16 @@
 var pieSeries = chart.series.push(new am4charts.PieSeries());
 pieSeries.dataFields.value = "percentage";
 pieSeries.dataFields.category = "sector";
-pieSeries.innerRadius = am4core.percent(9);
+pieSeries.innerRadius = am4core.percent(1.5);
 pieSeries.ticks.template.disabled = false;
 pieSeries.labels.template.disabled = false;
 var rgm = new am4core.RadialGradientModifier();
-rgm.brightnesses.push(-0.8, -0.8, -0.5, 0, - 0.5);
+rgm.brightnesses.push(-0.8, -0.8, -0.5, 0, - 0.82);
 pieSeries.slices.template.fillModifier = rgm;
 pieSeries.slices.template.strokeModifier = rgm;
-pieSeries.slices.template.strokeOpacity = 0.8;
-pieSeries.slices.template.strokeWidth = 1;
+pieSeries.slices.template.strokeOpacity = 1;
+pieSeries.slices.template.strokeWidth = 10;
+
 
 // chart.legend.position = "right";
 
@@ -82,7 +86,13 @@ pieSeries.slices.template.strokeWidth = 1;
     
     // And, for a good measure, let's add a legend
     chart.legend = new am4charts.Legend();
-
+    chart.legend.useDefaultMarker = true;
+    var marker = chart.legend.markers.template.children.getIndex(0);
+    marker.cornerRadius(10, 10, 6, 6);
+    marker.strokeWidth = 2;
+    marker.strokeOpacity = 1;
+    marker.stroke = am4core.color("#111");
+    chart.colors.step = 2;
     </script>
 
 

@@ -33,48 +33,48 @@
     
     // Add data
     chart.data = [{
-      "country": "Communication Services",
-      "litres": 500,
+      "sector": "Communication Services",
+      "percentage": 9.9,
       "subData": [{ name: "A", value: 200 }, { name: "B", value: 150 }, { name: "C", value: 100 }, { name: "D", value: 50 }]
     }, {
-      "country": "Consumer Discretionary",
-      "litres": 300,
+      "sector": "Consumer Discretionary",
+      "percentage": 10.2,
       "subData": [{ name: "A", value: 150 }, { name: "B", value: 100 }, { name: "C", value: 50 }]
     }, {
-      "country": "Consumer Staples",
-      "litres": 200,
+      "sector": "Consumer Staples",
+      "percentage": 6.7,
       "subData": [{ name: "A", value: 110 }, { name: "B", value: 60 }, { name: "C", value: 30 }]
     }, {
-      "country": "Energy",
-      "litres": 150,
+      "sector": "Energy",
+      "percentage": 6.0,
       "subData": [{ name: "A", value: 80 }, { name: "B", value: 40 }, { name: "C", value: 30 }]
     }, {
-      "country": "Financials",
-      "litres": 140,
+      "sector": "Financials",
+      "percentage": 13.7,
       "subData": [{ name: "A", value: 90 }, { name: "B", value: 40 }, { name: "C", value: 10 }]
     }, {
-      "country": "Health Care",
-      "litres": 140,
+      "sector": "Health Care",
+      "percentage": 14.9,
       "subData": [{ name: "A", value: 90 }, { name: "B", value: 40 }, { name: "C", value: 10 }]
     },  {
-      "country": "Industrials",
-      "litres": 140,
+      "sector": "Industrials",
+      "percentage": 9.7,
       "subData": [{ name: "A", value: 90 }, { name: "B", value: 40 }, { name: "C", value: 10 }]
     },  {
-      "country": "Materials",
-      "litres": 140,
+      "sector": "Materials",
+      "percentage": 2.5,
       "subData": [{ name: "A", value: 90 }, { name: "B", value: 40 }, { name: "C", value: 10 }]
     },  {
-      "country": "Real Estate",
-      "litres": 140,
+      "sector": "Real Estate",
+      "percentage": 2.7,
       "subData": [{ name: "A", value: 90 }, { name: "B", value: 40 }, { name: "C", value: 10 }]
     },  {
-      "country": "Technology",
-      "litres": 140,
+      "sector": "Technology",
+      "percentage": 20.8,
       "subData": [{ name: "A", value: 90 }, { name: "B", value: 40 }, { name: "C", value: 10 }]
     },  {
-      "country": "Utilities",
-      "litres": 120,
+      "sector": "Utilities",
+      "percentage": 2.8,
       "subData": [{ name: "A", value: 60 }, { name: "B", value: 30 }, { name: "C", value: 30 }]
     }];
 
@@ -82,35 +82,35 @@
 
 
     // chart.data = [{
-    //   "country": "Lithuania",
-    //   "litres": 500,
+    //   "sector": "Lithuania",
+    //   "percentage": 500,
     //   "subData": [{ name: "A", value: 200 }, { name: "B", value: 150 }, { name: "C", value: 100 }, { name: "D", value: 50 }]
     // }, {
-    //   "country": "Czech Republic",
-    //   "litres": 300,
+    //   "sector": "Czech Republic",
+    //   "percentage": 300,
     //   "subData": [{ name: "A", value: 150 }, { name: "B", value: 100 }, { name: "C", value: 50 }]
     // }, {
-    //   "country": "Ireland",
-    //   "litres": 200,
+    //   "sector": "Ireland",
+    //   "percentage": 200,
     //   "subData": [{ name: "A", value: 110 }, { name: "B", value: 60 }, { name: "C", value: 30 }]
     // }, {
-    //   "country": "Germany",
-    //   "litres": 150,
+    //   "sector": "Germany",
+    //   "percentage": 150,
     //   "subData": [{ name: "A", value: 80 }, { name: "B", value: 40 }, { name: "C", value: 30 }]
     // }, {
-    //   "country": "Australia",
-    //   "litres": 140,
+    //   "sector": "Australia",
+    //   "percentage": 140,
     //   "subData": [{ name: "A", value: 90 }, { name: "B", value: 40 }, { name: "C", value: 10 }]
     // }, {
-    //   "country": "Austria",
-    //   "litres": 120,
+    //   "sector": "Austria",
+    //   "percentage": 120,
     //   "subData": [{ name: "A", value: 60 }, { name: "B", value: 30 }, { name: "C", value: 30 }]
     // }];
     
     // Add and configure Series
     var pieSeries = chart.series.push(new am4charts.PieSeries());
-    pieSeries.dataFields.value = "litres";
-    pieSeries.dataFields.category = "country";
+    pieSeries.dataFields.value = "percentage";
+    pieSeries.dataFields.category = "sector";
     pieSeries.slices.template.states.getKey("active").properties.shiftRadius = 0;
     //pieSeries.labels.template.text = "{category}\n{value.percent.formatNumber('#.#')}%";
     

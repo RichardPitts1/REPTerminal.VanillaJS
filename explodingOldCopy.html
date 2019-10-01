@@ -24,9 +24,8 @@
     // Themes end
     
     var container = am4core.create("chartdiv", am4core.Container);
-    container.width = am4core.percent(100);
+    container.width = am4core.percent(80);
     container.height = am4core.percent(100);
-    // So if you uncomment this out, it shifts the child pie chart over to the left.
     container.layout = "horizontal";
 
     // DONUT ATTEMPT
@@ -42,8 +41,6 @@
     // This is how I achieved the donut functionality:
     chart.innerRadius = am4core.percent(40)
 
-
-
 // Here is the NEW attempted functionality!!!
 // var pieSeries = chart.series.push(new am4charts.PieSeries());
 // pieSeries.dataFields.value = "percentage";
@@ -53,10 +50,6 @@
 // pieSeries.labels.template.disabled = false;
 // var rgm = new am4core.RadialGradientModifier();
 // rgm.brightnesses.push(-0.8, -0.8, -0.5, 0, - 0.82);
-// pieSeries.slices.template.fillModifier = rgm;
-// pieSeries.slices.template.strokeModifier = rgm;
-// pieSeries.slices.template.strokeOpacity = 1;
-// pieSeries.slices.template.strokeWidth = 10;
 
 
 // Here I am messing with the manipulable properties exposed by the console.log statement.  
@@ -70,9 +63,8 @@ console.log(container)
 
 // container.alwaysShowTooltip = true  
 
-// container.alwaysShowTooltip = true  ENDING up being where you call container.tooltip.showToolTip  
-// Having this documented aided the process.
-// Comments: Above...
+// container.alwaysShowTooltip = true  
+// Comments: default was false  DOESNT SEEMINGLY DO ANYTHING!
 // \\\\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~////
 
 
@@ -80,8 +72,7 @@ console.log(container)
 
 // container.background.draggable = true
 
-// Comments: So this added a black background that you could click and drag around the screen.  It worked,
-// But it was applicable at the moment.  Now we know/remember we can do this though.
+// Comments: So this added a black background that you could click and drag around the screen
 // \\\\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~////
 
 
@@ -102,135 +93,78 @@ container.fontSize = 17
 // \\\\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~////
 
 
-
 // 5 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\
 
-// container.horizontalCenter = false
+// container.legend.align = true OR "Center"
 
-
-// Comments: Doesn't Do Shit
+// Comments:   Doesnt do Shit
 // \\\\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~////
 
 
 // 6 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\
-
-
-// container.isHover = true
-
-// Comments: Doesn't Do Shit
+// Comments: So this added a black background that you could click and drag around the screen
 // \\\\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~////
 
 
 // 7 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\
-// Comments: So June, a good practice would be to iterate through possible modifications and document 
-// Them using this method so you can keep track of certain modifications.  Maybe a property changes
-// Something, but it isn't desireable at the moment but may be later?  Likewise, we find other alike
-// amCharts have properties that are similar and can be modified.  This helps us cross-correlate relations.
-// Later, we will modify the source code base and this can be used again for reference.  For example,
-// Rolloutdelay does not work as documented below(#9).  What if we wanted it to say spin on startup?  You get the idea...
-// Lastly, this is a creative method, iterating through possibilities versus conjuring up integrations...Get em'
-
-// To give an example, fill modifier is the property on the donut we implement to achieve desired functionality...We use this 
-// To operate on this model like so:  It doesn't work, but we see the property is modified and cross-correlate with donut model 
-// to gain insight into how to get it working.
-// var rgm = new am4core.RadialGradientModifier();
-// rgm.brightnesses.push(-0.8, -0.8, -0.5, 0, - 0.82);
-// container.fillModifier = rgm;
-// container.strokeModifier = rgm;
+// Comments: So this added a black background that you could click and drag around the screen
 // \\\\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~////
 
 
 // 8 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\
-
-// container.height.percent = 80
-
-
-// Comments: Doesnt do shit
+// Comments: So this added a black background that you could click and drag around the screen
 // \\\\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~////
-
 
 
 // 9 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\
-
-// container.rollOutDelay = 10000
-
-// Comments: Doesn't do shit
+// Comments: So this added a black background that you could click and drag around the screen
 // \\\\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~////
-
-
-
 // 10 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\
-
-// container.contentHeight = 10
-
-// Comments: Doesn't do shit
+// Comments: So this added a black background that you could click and drag around the screen
 // \\\\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~////
 
 
 // 11 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\
-
-// container.alignLabels = true
-
 // Comments: So this added a black background that you could click and drag around the screen
 // \\\\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~////
 
 
 // 12 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\
-
-// container._absoluteHeight = 3000
-
-// Comments: I beleive this changed the height up to a certain range...Notice the _ that means its a get/set property
+// Comments: So this added a black background that you could click and drag around the screen
 // \\\\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~////
-
-
 
 
 // 13 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\
-
-// container.scale = 2
-
-// Comments: This Works!  But we don't want it bigger..
+// Comments: So this added a black background that you could click and drag around the screen
 // \\\\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~////
 
-// For June if you would like to experiemnt !  Use the same format 
 
 // 14 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\
-// Comments: 
+// Comments: So this added a black background that you could click and drag around the screen
 // \\\\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~////
 
 
 // 15 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\
-// Comments: 
+// Comments: So this added a black background that you could click and drag around the screen
 // \\\\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~////
 
 
 // 16 /\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\/\\
-// Comments:
+// Comments: So this added a black background that you could click and drag around the screen
 // \\\\~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~////
 
-// End of Innocuous changes... END END END   What exactly did we want to change though?  Did we assuredly know within the realm 
-// of possibilities?  Now, we have a better idea.
 
 
 
 
 
-// (Serious) Attempt 1:  These are differnet because there are specific changes we are trying to get to, like looking like the donut example.
-// var pieSeries = chart.series.push(new am4charts.PieSeries());
-// pieSeries.dataFields.value = "percentage";
-// pieSeries.dataFields.category = "sector";
-// pieSeries.innerRadius = am4core.percent(1.5);
-// pieSeries.ticks.template.disabled = false;
-// pieSeries.labels.template.disabled = false;
-// var rgm = new am4core.RadialGradientModifier();
-// rgm.brightnesses.push(-0.8, -0.8, -0.5, 0, - 0.82);
-// pieSeries.slices.template.fillModifier = rgm;
-// pieSeries.slices.template.strokeModifier = rgm;
-// pieSeries.slices.template.strokeOpacity = 1;
-// pieSeries.slices.template.strokeWidth = 10;
+// End of Innocuous changes... END END END 
 
-// Comments:  So we got a donut inside the donut, it doesnt spin though and it isn't the correct size.
 
+
+
+
+// Attempt 1
 
 // 2
 

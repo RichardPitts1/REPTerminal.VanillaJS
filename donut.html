@@ -22,6 +22,7 @@
     // Create chart instance
     var chart = am4core.create("chartdiv", am4charts.PieChart);
     chart.innerRadius = am4core.percent(40);
+    chart.innerRadius.percent = 24
     // Themes begin
     // am4core.useTheme(am4themes_dark);
     // am4core.useTheme(am4themes_animated);
@@ -44,6 +45,8 @@ pieSeries.slices.template.fillModifier = rgm;
 pieSeries.slices.template.strokeModifier = rgm;
 pieSeries.slices.template.strokeOpacity = 1;
 pieSeries.slices.template.strokeWidth = 10;
+
+console.log(pieSeries)
 
 
 // chart.legend.position = "right";

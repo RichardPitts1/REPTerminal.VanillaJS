@@ -1,28 +1,28 @@
 am4core.ready(function() {
     
-    // Themes begin
-    am4core.useTheme(am4themes_dark);
-    am4core.useTheme(am4themes_animated);
-    // Themes end
-    
-    var container = am4core.create("explodingchartdiv", am4core.Container);
-    container.width = am4core.percent(100);
-    container.height = am4core.percent(100);
-    // So if you uncomment this out, it shifts the child pie chart over to the left.
-    container.layout = "horizontal";
+  // Themes begin
+  am4core.useTheme(am4themes_dark);
+  am4core.useTheme(am4themes_animated);
+  // Themes end
+  
+  var container = am4core.create("explodingChartdiv", am4core.Container);
+  container.width = am4core.percent(100);
+  container.height = am4core.percent(100);
+  // So if you uncomment this out, it shifts the child pie chart over to the left.
+  container.layout = "horizontal";
 
-    // DONUT ATTEMPT
-    // This doesn't exactly work because its not a PieChart with a child
-    // container.innerRadius = am4core.percent(40)
+  // DONUT ATTEMPT
+  // This doesn't exactly work because its not a PieChart with a child
+  // container.innerRadius = am4core.percent(40)
 
-    // LEGEND ATTEMPT
-    container.legend = new am4charts.Legend();
-    
-    
-    var chart = container.createChild(am4charts.PieChart);
-    chart.legend = new am4charts.Legend()
-    // This is how I achieved the donut functionality:
-    chart.innerRadius = am4core.percent(40)
+  // LEGEND ATTEMPT
+  container.legend = new am4charts.Legend();
+  
+  
+  var chart = container.createChild(am4charts.PieChart);
+  chart.legend = new am4charts.Legend()
+  // This is how I achieved the donut functionality:
+  chart.innerRadius = am4core.percent(40)
 
 
 
@@ -232,173 +232,173 @@ container.fontSize = 17
 
 // 10
 
-    
-    // Add data
-    chart.data = [{
-      // As of January 25, 2019, the total value of all communication services stocks in the United States came to $4.42 trillion, or 10.33% of the market. The communications industry includes stocks such as AT&T and Verizon.
-      "sector": "Communication Services",
-      "percentage": 9.9,
-      "subData": [{ name: "Diversified Telecommunication Services", value: 200 }, { name: "Wireless Telecommunication Services", value: 150 }, { name: "Entertainment", value: 100 }, { name: "Media", value: 40 }, {name: "Interactive Media & Services", value: 10}]
-    }, {
-      // As of January 25, 2019, the total value of all consumer discretionary stocks in the United States came to $4.54 trillion, or about 10.11% of the market.
-      "sector": "Consumer Discretionary",
-      "percentage": 10.2,
-      "subData": [{ name: "Automobile Components Industry", value: 909 }, { name: "Automobiles Industry", value: 909 }, { name: "Distributors Industry", value: 909 }, { name: "Diversified Consumer Services Industry", value: 909 }, 
-      { name: "Hotels, Restaurants & Leisure Industry", value: 909 }, { name: "Household Durables Industry", value: 909 }, { name: "Leisure Products Industry", value: 909 }, { name: "Multiline Retail Industry", value: 909 }, 
-      { name: "Specialty Retail Industry", value: 909 }, { name: "Textile, Apparel & Luxury Goods Industry", value: 909 }, { name: "Internet & Direct Marketing", value: 909 }]
-    }, {
-      // As of January 25, 2019, the total value of all consumer staples stocks in the United States came to $2.95 trillion, or about 7.18% of the market. 
-      // This is a particularly interesting sector because it is one of the few that disproportionately produces rich shareholders over long periods of time.
-      "sector": "Consumer Staples",
-      "percentage": 6.7,
-      "subData": [{ name: "Beverages Industry", value: 110 }, { name: "Food & Staples Retailing Industry", value: 60 }, { name: "Food Products Industry", value: 30 }, { name: "Household Products Industry", value: 30 }, { name: "Personal Products Industry", value: 30 }, 
-      { name: "Tobacco Industry", value: 30 }]
-    }, {
-      "sector": "Energy",
-      "percentage": 6.0,
-      "subData": [{ name: "Energy Equipment & Services Industry", value: 80 }, { name: "Oil, Gas & Consumable Fuels Industry", value: 40 }]
-    }, {
-      "sector": "Financials",
-      "percentage": 13.7,
-      "subData": [{ name: "Banking Industry", value: 1428 }, { name: "Capital Markets Industry", value: 1428 }, { name: "Consumer Finance Industry", value: 1428 }, { name: "Diversified Financial Services Industry", value: 1428 }, { name: "Insurance Industry", value: 1428 },
-       { name: "Mortgage Real Estate Investment Trusts (REITs) Industry", value: 1428 }, { name: "Thrifts & Mortgage Finance Industry", value: 1428 }]
-    }, {
-      "sector": "Health Care",
-      "percentage": 14.9,
-      "subData": [{ name: "Biotechnology Industry", value: 16.66 }, { name: "Health Care Equipment & Supplies Industry", value: 16.66 }, { name: "Health Care Providers & Services Industry", value: 16.66 }, { name: "Health Care Providers & Services Industry", value: 16.66 }, 
-      { name: "Health Care Technology Industry", value: 16.66 }, { name: "Life Sciences Tools & Services Industry", value: 16.66 }, { name: "Pharmaceuticals Industry", value: 16.66 }]
-    },  {
-      "sector": "Industrials",
-      "percentage": 9.7,
-      "subData": [{ name: "Aerospace & Defense Industry", value: 7.14 }, { name: "Air Freight & Logistics Industry", value: 7.14 }, { name: "Airlines Industry", value: 7.14 }, { name: "Building Products Industry", value: 7.14 }, 
-      { name: "Commercial Services & Supplies Industry", value: 7.14 }, { name: "Construction & Engineering Industry", value: 7.14 }, { name: "Electrical Equipment Industry", value: 7.14 }, { name: "Industrial Conglomerates Industry", value: 7.14 }, 
-      { name: "Machinery Industry", value: 7.14 }, { name: "Marine Industry", value: 7.14 }, { name: "Professional Services Industry", value: 7.14 }, { name: "Road & Rail Industry", value: 7.14 }, { name: "Trading Companies & Distributors Industry", value: 7.14 }
-      , { name: "Transportation Infrastructure Industry", value: 7.14 }]
-    },  {
-      "sector": "Materials",
-      "percentage": 2.5,
-      "subData": [{ name: "Chemicals Industry", value: 90 }, { name: "Construction Materials Industry", value: 40 }, { name: "Containers & Packaging Industry", value: 10 }, { name: "Metals & Mining Industry", value: 10 }, { name: "Paper & Forest Products Industry", value: 10 }]
-    },  {
-      "sector": "Real Estate",
-      "percentage": 2.7,
-      "subData": [{ name: "Equity Real Estate Investment Trusts", value: 50 }, { name: "Real Estate Management & Development", value: 50 }]
-    },  {
-      "sector": "Technology",
-      "percentage": 20.8,
-      "subData": [{ name: "Communications Equipment Industry", value: 16.66 }, { name: "Electronic Equipment, Instruments & Components Industry", value: 16.66 }, { name: "IT Services Industry", value: 16.66 }, { name: "Semiconductors & Semiconductor Equipment Industry", value: 16.66 }, 
-      { name: "Software Industry", value: 16.66 }, { name: "Technology Hardware, Storage & Peripherals Industry", value: 16.66 }]
-    },  {
-      "sector": "Utilities",
-      "percentage": 2.8,
-      "subData": [{ name: "Electric Utilities Industry", value: 20 }, { name: "Gas Utilities Industry", value: 20 }, { name: "Independent Power and Renewable Electricity Producers Industry", value: 20 }, { name: "Multi-Utilities Industry", value: 20 }, { name: "Water Utilities Industry", value: 20 }]
-    }];
+  
+  // Add data
+  chart.data = [{
+    // As of January 25, 2019, the total value of all communication services stocks in the United States came to $4.42 trillion, or 10.33% of the market. The communications industry includes stocks such as AT&T and Verizon.
+    "sector": "Communication Services",
+    "percentage": 9.9,
+    "subData": [{ name: "Diversified Telecommunication Services", value: 200 }, { name: "Wireless Telecommunication Services", value: 150 }, { name: "Entertainment", value: 100 }, { name: "Media", value: 40 }, {name: "Interactive Media & Services", value: 10}]
+  }, {
+    // As of January 25, 2019, the total value of all consumer discretionary stocks in the United States came to $4.54 trillion, or about 10.11% of the market.
+    "sector": "Consumer Discretionary",
+    "percentage": 10.2,
+    "subData": [{ name: "Automobile Components Industry", value: 909 }, { name: "Automobiles Industry", value: 909 }, { name: "Distributors Industry", value: 909 }, { name: "Diversified Consumer Services Industry", value: 909 }, 
+    { name: "Hotels, Restaurants & Leisure Industry", value: 909 }, { name: "Household Durables Industry", value: 909 }, { name: "Leisure Products Industry", value: 909 }, { name: "Multiline Retail Industry", value: 909 }, 
+    { name: "Specialty Retail Industry", value: 909 }, { name: "Textile, Apparel & Luxury Goods Industry", value: 909 }, { name: "Internet & Direct Marketing", value: 909 }]
+  }, {
+    // As of January 25, 2019, the total value of all consumer staples stocks in the United States came to $2.95 trillion, or about 7.18% of the market. 
+    // This is a particularly interesting sector because it is one of the few that disproportionately produces rich shareholders over long periods of time.
+    "sector": "Consumer Staples",
+    "percentage": 6.7,
+    "subData": [{ name: "Beverages Industry", value: 110 }, { name: "Food & Staples Retailing Industry", value: 60 }, { name: "Food Products Industry", value: 30 }, { name: "Household Products Industry", value: 30 }, { name: "Personal Products Industry", value: 30 }, 
+    { name: "Tobacco Industry", value: 30 }]
+  }, {
+    "sector": "Energy",
+    "percentage": 6.0,
+    "subData": [{ name: "Energy Equipment & Services Industry", value: 80 }, { name: "Oil, Gas & Consumable Fuels Industry", value: 40 }]
+  }, {
+    "sector": "Financials",
+    "percentage": 13.7,
+    "subData": [{ name: "Banking Industry", value: 1428 }, { name: "Capital Markets Industry", value: 1428 }, { name: "Consumer Finance Industry", value: 1428 }, { name: "Diversified Financial Services Industry", value: 1428 }, { name: "Insurance Industry", value: 1428 },
+     { name: "Mortgage Real Estate Investment Trusts (REITs) Industry", value: 1428 }, { name: "Thrifts & Mortgage Finance Industry", value: 1428 }]
+  }, {
+    "sector": "Health Care",
+    "percentage": 14.9,
+    "subData": [{ name: "Biotechnology Industry", value: 16.66 }, { name: "Health Care Equipment & Supplies Industry", value: 16.66 }, { name: "Health Care Providers & Services Industry", value: 16.66 }, { name: "Health Care Providers & Services Industry", value: 16.66 }, 
+    { name: "Health Care Technology Industry", value: 16.66 }, { name: "Life Sciences Tools & Services Industry", value: 16.66 }, { name: "Pharmaceuticals Industry", value: 16.66 }]
+  },  {
+    "sector": "Industrials",
+    "percentage": 9.7,
+    "subData": [{ name: "Aerospace & Defense Industry", value: 7.14 }, { name: "Air Freight & Logistics Industry", value: 7.14 }, { name: "Airlines Industry", value: 7.14 }, { name: "Building Products Industry", value: 7.14 }, 
+    { name: "Commercial Services & Supplies Industry", value: 7.14 }, { name: "Construction & Engineering Industry", value: 7.14 }, { name: "Electrical Equipment Industry", value: 7.14 }, { name: "Industrial Conglomerates Industry", value: 7.14 }, 
+    { name: "Machinery Industry", value: 7.14 }, { name: "Marine Industry", value: 7.14 }, { name: "Professional Services Industry", value: 7.14 }, { name: "Road & Rail Industry", value: 7.14 }, { name: "Trading Companies & Distributors Industry", value: 7.14 }
+    , { name: "Transportation Infrastructure Industry", value: 7.14 }]
+  },  {
+    "sector": "Materials",
+    "percentage": 2.5,
+    "subData": [{ name: "Chemicals Industry", value: 90 }, { name: "Construction Materials Industry", value: 40 }, { name: "Containers & Packaging Industry", value: 10 }, { name: "Metals & Mining Industry", value: 10 }, { name: "Paper & Forest Products Industry", value: 10 }]
+  },  {
+    "sector": "Real Estate",
+    "percentage": 2.7,
+    "subData": [{ name: "Equity Real Estate Investment Trusts", value: 50 }, { name: "Real Estate Management & Development", value: 50 }]
+  },  {
+    "sector": "Technology",
+    "percentage": 20.8,
+    "subData": [{ name: "Communications Equipment Industry", value: 16.66 }, { name: "Electronic Equipment, Instruments & Components Industry", value: 16.66 }, { name: "IT Services Industry", value: 16.66 }, { name: "Semiconductors & Semiconductor Equipment Industry", value: 16.66 }, 
+    { name: "Software Industry", value: 16.66 }, { name: "Technology Hardware, Storage & Peripherals Industry", value: 16.66 }]
+  },  {
+    "sector": "Utilities",
+    "percentage": 2.8,
+    "subData": [{ name: "Electric Utilities Industry", value: 20 }, { name: "Gas Utilities Industry", value: 20 }, { name: "Independent Power and Renewable Electricity Producers Industry", value: 20 }, { name: "Multi-Utilities Industry", value: 20 }, { name: "Water Utilities Industry", value: 20 }]
+  }];
 
 
 
 
-    
-    // Add and configure Series
-    var pieSeries = chart.series.push(new am4charts.PieSeries());
-    pieSeries.dataFields.value = "percentage";
-    pieSeries.dataFields.category = "sector";
-    pieSeries.slices.template.states.getKey("active").properties.shiftRadius = 0;
-    //pieSeries.labels.template.text = "{category}\n{value.percent.formatNumber('#.#')}%";
-    
-    pieSeries.slices.template.events.on("hit", function(event) {
-      selectSlice(event.target.dataItem);
-    })
-    
-    var chart2 = container.createChild(am4charts.PieChart);
-    chart2.width = am4core.percent(30);
-    chart2.radius = am4core.percent(80);
-    
-    // Add and configure Series
-    var pieSeries2 = chart2.series.push(new am4charts.PieSeries());
-    pieSeries2.dataFields.value = "value";
-    pieSeries2.dataFields.category = "name";
-    pieSeries2.slices.template.states.getKey("active").properties.shiftRadius = 0;
-    //pieSeries2.labels.template.radius = am4core.percent(50);
-    //pieSeries2.labels.template.inside = true;
-    //pieSeries2.labels.template.fill = am4core.color("#ffffff");
-    pieSeries2.labels.template.disabled = true;
-    pieSeries2.ticks.template.disabled = true;
-    pieSeries2.alignLabels = false;
-    pieSeries2.events.on("positionchanged", updateLines);
-    
-    var interfaceColors = new am4core.InterfaceColorSet();
-    
-    var line1 = container.createChild(am4core.Line);
-    line1.strokeDasharray = "2,2";
-    line1.strokeOpacity = 0.5;
-    line1.stroke = interfaceColors.getFor("alternativeBackground");
-    line1.isMeasured = false;
-    
-    var line2 = container.createChild(am4core.Line);
-    line2.strokeDasharray = "2,2";
-    line2.strokeOpacity = 0.5;
-    line2.stroke = interfaceColors.getFor("alternativeBackground");
-    line2.isMeasured = false;
-    
-    var selectedSlice;
-    
-    function selectSlice(dataItem) {
-    
-      selectedSlice = dataItem.slice;
-    
-      var fill = selectedSlice.fill;
-    
-      var count = dataItem.dataContext.subData.length;
-      pieSeries2.colors.list = [];
-      for (var i = 0; i < count; i++) {
-        pieSeries2.colors.list.push(fill.brighten(i * 2 / count));
-      }
-    
-      chart2.data = dataItem.dataContext.subData;
-      pieSeries2.appear();
-    
-      var middleAngle = selectedSlice.middleAngle;
-      var firstAngle = pieSeries.slices.getIndex(0).startAngle;
-      var animation = pieSeries.animate([{ property: "startAngle", to: firstAngle - middleAngle }, { property: "endAngle", to: firstAngle - middleAngle + 360 }], 600, am4core.ease.sinOut);
-      animation.events.on("animationprogress", updateLines);
-    
-      selectedSlice.events.on("transformed", updateLines);
-    
-    //  var animation = chart2.animate({property:"dx", from:-container.pixelWidth / 2, to:0}, 2000, am4core.ease.elasticOut)
-    //  animation.events.on("animationprogress", updateLines)
+  
+  // Add and configure Series
+  var pieSeries = chart.series.push(new am4charts.PieSeries());
+  pieSeries.dataFields.value = "percentage";
+  pieSeries.dataFields.category = "sector";
+  pieSeries.slices.template.states.getKey("active").properties.shiftRadius = 0;
+  //pieSeries.labels.template.text = "{category}\n{value.percent.formatNumber('#.#')}%";
+  
+  pieSeries.slices.template.events.on("hit", function(event) {
+    selectSlice(event.target.dataItem);
+  })
+  
+  var chart2 = container.createChild(am4charts.PieChart);
+  chart2.width = am4core.percent(30);
+  chart2.radius = am4core.percent(80);
+  
+  // Add and configure Series
+  var pieSeries2 = chart2.series.push(new am4charts.PieSeries());
+  pieSeries2.dataFields.value = "value";
+  pieSeries2.dataFields.category = "name";
+  pieSeries2.slices.template.states.getKey("active").properties.shiftRadius = 0;
+  //pieSeries2.labels.template.radius = am4core.percent(50);
+  //pieSeries2.labels.template.inside = true;
+  //pieSeries2.labels.template.fill = am4core.color("#ffffff");
+  pieSeries2.labels.template.disabled = true;
+  pieSeries2.ticks.template.disabled = true;
+  pieSeries2.alignLabels = false;
+  pieSeries2.events.on("positionchanged", updateLines);
+  
+  var interfaceColors = new am4core.InterfaceColorSet();
+  
+  var line1 = container.createChild(am4core.Line);
+  line1.strokeDasharray = "2,2";
+  line1.strokeOpacity = 0.5;
+  line1.stroke = interfaceColors.getFor("alternativeBackground");
+  line1.isMeasured = false;
+  
+  var line2 = container.createChild(am4core.Line);
+  line2.strokeDasharray = "2,2";
+  line2.strokeOpacity = 0.5;
+  line2.stroke = interfaceColors.getFor("alternativeBackground");
+  line2.isMeasured = false;
+  
+  var selectedSlice;
+  
+  function selectSlice(dataItem) {
+  
+    selectedSlice = dataItem.slice;
+  
+    var fill = selectedSlice.fill;
+  
+    var count = dataItem.dataContext.subData.length;
+    pieSeries2.colors.list = [];
+    for (var i = 0; i < count; i++) {
+      pieSeries2.colors.list.push(fill.brighten(i * 2 / count));
     }
-    
-    
-    function updateLines() {
-      if (selectedSlice) {
-        var p11 = { x: selectedSlice.radius * am4core.math.cos(selectedSlice.startAngle), y: selectedSlice.radius * am4core.math.sin(selectedSlice.startAngle) };
-        var p12 = { x: selectedSlice.radius * am4core.math.cos(selectedSlice.startAngle + selectedSlice.arc), y: selectedSlice.radius * am4core.math.sin(selectedSlice.startAngle + selectedSlice.arc) };
-    
-        p11 = am4core.utils.spritePointToSvg(p11, selectedSlice);
-        p12 = am4core.utils.spritePointToSvg(p12, selectedSlice);
-    
-        var p21 = { x: 0, y: -pieSeries2.pixelRadius };
-        var p22 = { x: 0, y: pieSeries2.pixelRadius };
-    
-        p21 = am4core.utils.spritePointToSvg(p21, pieSeries2);
-        p22 = am4core.utils.spritePointToSvg(p22, pieSeries2);
-    
-        line1.x1 = p11.x;
-        line1.x2 = p21.x;
-        line1.y1 = p11.y;
-        line1.y2 = p21.y;
-    
-        line2.x1 = p12.x;
-        line2.x2 = p22.x;
-        line2.y1 = p12.y;
-        line2.y2 = p22.y;
-      }
+  
+    chart2.data = dataItem.dataContext.subData;
+    pieSeries2.appear();
+  
+    var middleAngle = selectedSlice.middleAngle;
+    var firstAngle = pieSeries.slices.getIndex(0).startAngle;
+    var animation = pieSeries.animate([{ property: "startAngle", to: firstAngle - middleAngle }, { property: "endAngle", to: firstAngle - middleAngle + 360 }], 600, am4core.ease.sinOut);
+    animation.events.on("animationprogress", updateLines);
+  
+    selectedSlice.events.on("transformed", updateLines);
+  
+  //  var animation = chart2.animate({property:"dx", from:-container.pixelWidth / 2, to:0}, 2000, am4core.ease.elasticOut)
+  //  animation.events.on("animationprogress", updateLines)
+  }
+  
+  
+  function updateLines() {
+    if (selectedSlice) {
+      var p11 = { x: selectedSlice.radius * am4core.math.cos(selectedSlice.startAngle), y: selectedSlice.radius * am4core.math.sin(selectedSlice.startAngle) };
+      var p12 = { x: selectedSlice.radius * am4core.math.cos(selectedSlice.startAngle + selectedSlice.arc), y: selectedSlice.radius * am4core.math.sin(selectedSlice.startAngle + selectedSlice.arc) };
+  
+      p11 = am4core.utils.spritePointToSvg(p11, selectedSlice);
+      p12 = am4core.utils.spritePointToSvg(p12, selectedSlice);
+  
+      var p21 = { x: 0, y: -pieSeries2.pixelRadius };
+      var p22 = { x: 0, y: pieSeries2.pixelRadius };
+  
+      p21 = am4core.utils.spritePointToSvg(p21, pieSeries2);
+      p22 = am4core.utils.spritePointToSvg(p22, pieSeries2);
+  
+      line1.x1 = p11.x;
+      line1.x2 = p21.x;
+      line1.y1 = p11.y;
+      line1.y2 = p21.y;
+  
+      line2.x1 = p12.x;
+      line2.x2 = p22.x;
+      line2.y1 = p12.y;
+      line2.y2 = p22.y;
     }
-    
-    chart.events.on("datavalidated", function() {
-      setTimeout(function() {
-        selectSlice(pieSeries.dataItems.getIndex(0));
-      }, 1000);
-    });
-    
-    
-    }); // end am4core.ready()
+  }
+  
+  chart.events.on("datavalidated", function() {
+    setTimeout(function() {
+      selectSlice(pieSeries.dataItems.getIndex(0));
+    }, 1000);
+  });
+  
+  
+  }); // end am4core.ready()

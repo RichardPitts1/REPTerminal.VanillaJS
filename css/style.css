@@ -1,7 +1,16 @@
+body {
+    background-color:#454a58;
+}
+
 #chartdiv {
     width: 100%;
     height: 100%;
     max-width:100%;
     background-color:#454a58;
+    /* display: none; */
 }
     
+#explodingChartdiv {
+    width: 100%;
+    height: 500px;
+  }

@@ -1,11 +1,15 @@
+var chart = am4core.create("chartdiv", am4maps.MapChart);
+
+console.log(chart)
+
 am4core.ready(function() {
         
     // Themes begin
     am4core.useTheme(am4themes_animated);
     // Themes end
     
-    var chart = am4core.create("chartdiv", am4maps.MapChart);
-    console.log(chart)
+    // var chart = am4core.create("chartdiv", am4maps.MapChart);
+
     // Set map definition
     chart.geodata = am4geodata_worldLow;
     
@@ -14,6 +18,9 @@ am4core.ready(function() {
     chart.panBehavior = "rotateLongLat";
     chart.deltaLatitude = -20;
     chart.padding(20,20,20,20);
+
+    chart.isHidden = true
+    chart.opacity = 0.4
     
     // Create map polygon series
     var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());
@@ -50,10 +57,23 @@ am4core.ready(function() {
     if(animation){
     //  animation.stop(); Here you could make it instead of stopping, take you to the new view.
         animation.stop()
-        
-}       
+      // Here I want to call a function that displays the exploding view content while also hiding the former.
+      showExploding()
+    }       
     })
     
     }); // end am4core.ready()
 
 
+// Here is the beginning of the code for showing/hiding things
+// const earthView = document.getElementById('earthView')
+// const usaView = document.getElementById('tester')
+
+function showExploding() {
+  // So you want earthView display property to equal none.
+  console.log("Were getting there")
+  document.getElementById("earthView").style.display = "none"
+  console.log(document.getElementById("earthView").style)
+  // console.log(chart)
+  document.getElementById("explodingChartdiv").style.display = "block"
+}

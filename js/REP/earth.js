@@ -70,7 +70,6 @@ am4core.ready(function() {
 // const usaView = document.getElementById('tester')
 
 function showExploding() {
-  // So you want earthView display property to equal none.
   console.log("Were getting there")
   document.getElementById("earthView").style.display = "none"
   console.log(document.getElementById("earthView").style)

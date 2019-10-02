@@ -1,29 +1,11 @@
-<!-- Styles -->
-<style>
-    body { background-color: #30303d; color: #fff; }
-    #chartdiv {
-      width: 100%;
-      height: 500px;
-    }
-    
-    </style>
-    
-    <!-- Resources -->
-    <script src="https://www.amcharts.com/lib/4/core.js"></script>
-    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
-    <script src="https://www.amcharts.com/lib/4/themes/dark.js"></script>
-    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
-    
-    <!-- Chart code -->
-    <script>
-    am4core.ready(function() {
+am4core.ready(function() {
     
     // Themes begin
     am4core.useTheme(am4themes_dark);
     am4core.useTheme(am4themes_animated);
     // Themes end
     
-    var container = am4core.create("chartdiv", am4core.Container);
+    var container = am4core.create("explodingchartdiv", am4core.Container);
     container.width = am4core.percent(100);
     container.height = am4core.percent(100);
     // So if you uncomment this out, it shifts the child pie chart over to the left.
@@ -420,7 +402,3 @@ container.fontSize = 17
     
     
     }); // end am4core.ready()
-    </script>
-    
-    <!-- HTML -->
-    <div id="chartdiv"></div>></div>

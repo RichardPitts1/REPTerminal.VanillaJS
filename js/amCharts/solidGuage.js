@@ -7,7 +7,7 @@ am4core.ready(function() {
     
     
     // Create chart instance
-    var chart = am4core.create("chartdiv", am4charts.RadarChart);
+    var chart = am4core.create("solidGuageChartdiv", am4charts.RadarChart);
     
     // Add data
     chart.data = [{

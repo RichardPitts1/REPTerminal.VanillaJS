@@ -27,6 +27,13 @@ body {
   /* margin: right; */
   right: 0
   }
+
+  #solidGuageChartdiv {
+    width: 500px;
+    height: 500px;
+    left: 0;
+    background-color:#454a58;
+  }
     
 #explodingChartdiv {
     width: 100%;

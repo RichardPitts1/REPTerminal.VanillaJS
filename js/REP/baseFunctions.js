@@ -22,6 +22,6 @@ function showExploding() {
     console.log(document.getElementById("earthView").style)
     // console.log(chart)
     document.getElementById("explodingChartdiv").style.display = "block"
-
+    document.getElementById("solidGuageChartdiv").style.display = "block"
   }
 

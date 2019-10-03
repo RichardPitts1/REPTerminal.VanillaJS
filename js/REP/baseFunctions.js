@@ -15,3 +15,13 @@ usaViewButton.addEventListener('click', () => {
 
 })
 
+function showExploding() {
+    console.log("Were getting there")
+    document.getElementById("earthView").style.display = "none"
+    document.getElementById("animatedGuageChartdiv").style.display = "none"
+    console.log(document.getElementById("earthView").style)
+    // console.log(chart)
+    document.getElementById("explodingChartdiv").style.display = "block"
+
+  }
+

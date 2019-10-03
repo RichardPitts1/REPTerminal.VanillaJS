@@ -69,10 +69,10 @@ am4core.ready(function() {
 // const earthView = document.getElementById('earthView')
 // const usaView = document.getElementById('tester')
 
-function showExploding() {
-  console.log("Were getting there")
-  document.getElementById("earthView").style.display = "none"
-  console.log(document.getElementById("earthView").style)
-  // console.log(chart)
-  document.getElementById("explodingChartdiv").style.display = "block"
-}
+// function showExploding() {
+//   console.log("Were getting there")
+//   document.getElementById("earthView").style.display = "none"
+//   console.log(document.getElementById("earthView").style)
+//   // console.log(chart)
+//   document.getElementById("explodingChartdiv").style.display = "block"
+// }

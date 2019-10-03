@@ -46,7 +46,16 @@ body {
     left: 0;
     background-color:#454a58;
   }
-    
+
+  #stadiumChartdiv {
+    width: 420px;
+    height: 420px;
+    position: absolute;
+    right: 0;
+    bottom: 0
+  }
+
+  /* Page 2... */
 #explodingChartdiv {
     width: 100%;
     height: 500px;

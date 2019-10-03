@@ -19,6 +19,9 @@ function showExploding() {
     console.log("Were getting there")
     document.getElementById("earthView").style.display = "none"
     document.getElementById("animatedGuageChartdiv").style.display = "none"
+    document.getElementById("worldSolidGuageChartdiv").style.display = "none"
+    document.getElementById("clockChartdiv").style.display = "none"
+    document.getElementById("stadiumChartdiv").style.display = "none"
     console.log(document.getElementById("earthView").style)
     // console.log(chart)
     document.getElementById("explodingChartdiv").style.display = "block"

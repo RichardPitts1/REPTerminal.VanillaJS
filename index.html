@@ -18,6 +18,7 @@
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
+
      </head>
   
 
@@ -25,23 +26,27 @@
 
 
 
-    <body>    
+<body>    
 
-    <!-- <h1 class="typingREPtext1" style="text-align: center;">uInvest</h1> -->
-    <!-- I removed a | from the below html But this is the attempted type.js mod -->
-
-<!-- <div id="earthView" style="display: none">
+    
+<div id="earthView" style="display: block">
+    <div style="margin: left" id="clockChartdiv"></div>
     <h1 class="sz-headline" style="text-align: center;"><span class="typing REPtext1">uInvest</span><span class="typed-cursor typed-cursor--blink"></span></h1> 
-    <div id="chartdiv" style="width: 900px; height 800px; margin: auto"></div>
+    <div id="earthChartdiv" style="width: 900px; height 800px; margin: auto"></div>
+
 </div>
 
 <div style="display: none" id="explodingChartdiv"></div>>
 <button id="usaViewbutton">Click</button>
-</div> -->
+</div> 
 
-<div style="display: block" id="brkChartdiv">
+<div style="display: none" id="brkChartdiv">
 <button id="appleViewButton">Click to see Apple</button>
 </div>
+
+
+    
+
 
 
     <!-- My Javascript -->
@@ -49,6 +54,7 @@
     <script src="js/amCharts/exploding.js"></script>
     <script src="js/REP/baseFunctions.js"></script>
     <script src='js/amCharts/brkChart.js'></script>
+    <script src="js/amCharts/clock.js"></script>
 
     <!-- <script src="js/otherFrameworks/textToType.js"></script>
     <script src="js/otherFrameworks/typed.min.js"></script> -->

@@ -1,18 +1,20 @@
-<!--This is where we want to port all of our code such that its a SPA --> 
-
-<!-- The first goal is to create the Earth within here, modularized though!!-->
-
 <head>
     <title>uInvest</title>
 
     <!-- Javascript -->
-    <script src="js/amChartRelated/amCore.js"></script>
-    <script src="js/amChartRelated/amCharts.js"></script>
-    <script src="js/amChartRelated/amThemes.js"></script>
+    <script src="js/amChartSupport/amCore.js"></script>
+    <script src="js/amChartSupport/amCharts.js"></script>
+    <script src="js/amChartSupport/amThemes.js"></script>
+    <!-- Here are the above 3 in CDN if needed:-->
+        <!--  <script src="https://www.amcharts.com/lib/4/core.js"></script>
+              <script src="https://www.amcharts.com/lib/4/charts.js"></script>  
+              <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>      -->
     <script src="https://www.amcharts.com/lib/4/maps.js"></script>
     <script src="https://www.amcharts.com/lib/4/geodata/worldLow.js"></script>
     <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
     <script src="https://www.amcharts.com/lib/4/themes/dark.js"></script>
+    <script src="https://www.amcharts.com/lib/4/plugins/forceDirected.js"></script>
+
     <!-- CSS -->
     <link rel="stylesheet" href="css/style.css">
 
@@ -28,24 +30,26 @@
     <!-- <h1 class="typingREPtext1" style="text-align: center;">uInvest</h1> -->
     <!-- I removed a | from the below html But this is the attempted type.js mod -->
 
-<div id="earthView" style="display: block">
+<!-- <div id="earthView" style="display: none">
     <h1 class="sz-headline" style="text-align: center;"><span class="typing REPtext1">uInvest</span><span class="typed-cursor typed-cursor--blink"></span></h1> 
     <div id="chartdiv" style="width: 900px; height 800px; margin: auto"></div>
 </div>
 
 <div style="display: none" id="explodingChartdiv"></div>>
 <button id="usaViewbutton">Click</button>
-</div>
+</div> -->
 
-<div style="display: none" id="berkshireHathawayChartdiv">
+<div style="display: block" id="brkChartdiv">
 <button id="appleViewButton">Click to see Apple</button>
 </div>
 
 
     <!-- My Javascript -->
-    <script src="js/REP/earth.js"></script>
-    <script src="js/REP/exploding.js"></script>
+    <script src="js/amCharts/earth.js"></script>
+    <script src="js/amCharts/exploding.js"></script>
     <script src="js/REP/baseFunctions.js"></script>
+    <script src='js/amCharts/brkChart.js'></script>
+
     <!-- <script src="js/otherFrameworks/textToType.js"></script>
     <script src="js/otherFrameworks/typed.min.js"></script> -->
 

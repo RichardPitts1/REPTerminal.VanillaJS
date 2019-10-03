@@ -1,3 +1,12 @@
+
+
+document.addEventListener('DOMContentLoaded', function() {
+    console.log("Yea")
+})
+
+
+
+
 const usaViewButton = document.getElementById('usaViewbutton')
 usaViewButton.addEventListener('click', () => {
     // console.log("clicked")

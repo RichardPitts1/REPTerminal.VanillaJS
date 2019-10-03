@@ -45,16 +45,16 @@ am4core.ready(function() {
     var hourHand = chart.hands.push(new am4charts.ClockHand());
     hourHand.radius = am4core.percent(60);
     hourHand.startWidth = 10;
-    hourHand.endWidth = 10;
+    hourHand.endWidth = 2.5;
     hourHand.rotationDirection = "clockWise";
     hourHand.pin.radius = 8;
     hourHand.zIndex = 0;
     
     var minutesHand = chart.hands.push(new am4charts.ClockHand());
     minutesHand.rotationDirection = "clockWise";
-    minutesHand.startWidth = 7;
-    minutesHand.endWidth = 7;
-    minutesHand.radius = am4core.percent(78);
+    minutesHand.startWidth = 8;
+    minutesHand.endWidth = 1.5;
+    minutesHand.radius = am4core.percent(72);
     minutesHand.zIndex = 1;
     
     var secondsHand = chart.hands.push(new am4charts.ClockHand());

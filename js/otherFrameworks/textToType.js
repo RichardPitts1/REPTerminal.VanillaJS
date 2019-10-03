@@ -4,21 +4,21 @@ console.log("textToType.js Loads Successfully")
 var typed = new Typed(".typing", {
     strings: [
         "Welcome!",
-        "To the uInvest Terminal",
+        "Welcome to the uInvest Web App",
         "Everything u Need to invest",
-        "Like a pro",
+        "Like a pro...",
         "uInvest"
     ],
     typeSpeed: 60,
-    backSpeed: 60,
+    backSpeed: 10,
     backDelay: 500,
-    startDelay: 500,
+    startDelay: 3000,
     loop: false
     // smartBackspace: true
 });
 
     $(window).load(function() {
-        $("#overlay").delay(200).fadeOut('600', function() {
+        $("#overlay").delay(400).fadeOut('600', function() {
             $(this).addClass('remove');
         });
     });

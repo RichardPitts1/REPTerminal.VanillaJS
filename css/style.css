@@ -18,6 +18,15 @@ body {
   /* bottom: 0;
   right: 0; */
 }
+
+#animatedGuageChartdiv {
+  width: 320px;
+  height: 320px;
+  background-color:#454a58;
+  position: absolute;
+  /* margin: right; */
+  right: 0
+  }
     
 #explodingChartdiv {
     width: 100%;

@@ -78,8 +78,11 @@ document.addEventListener('DOMContentLoaded', function(e){
         // 
     })
     mainButton.addEventListener('click', function(e){
-        console.log("Only content from main page should show")
-        stockList.style.display = 'block'
+        console.log("Only content from Richard's page should show")
+        const RichardDiv = document.getElementById("RichardDiv")
+        RichardDiv.style.display = "block"
+        // stockList.style.display = 'block'
+        stockList.style.display = 'none'
         chartArea.style.display = 'none'
         timeArea.style.display = 'none'
         lookupArea.style.display = 'none'

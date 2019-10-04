@@ -1,0 +1,363 @@
+<!-- Styles -->
+<style>
+    #chartdiv {
+      width: 100%;
+      height:550px;
+    }
+    </style>
+    
+    <!-- Resources -->
+    <script src="https://www.amcharts.com/lib/4/core.js"></script>
+    <script src="https://www.amcharts.com/lib/4/charts.js"></script>
+    <script src="https://www.amcharts.com/lib/4/plugins/forceDirected.js"></script>
+    <script src="https://www.amcharts.com/lib/4/themes/animated.js"></script>
+    
+    <!-- Chart code -->
+    <script>
+   //  am4core.ready(function() {
+    
+   //  // Themes begin
+   //  am4core.useTheme(am4themes_animated);
+   //  // Themes end
+    
+   //  var chart = am4core.create("chartdiv", am4plugins_forceDirected.ForceDirectedTree);
+    
+   //  var networkSeries = chart.series.push(new am4plugins_forceDirected.ForceDirectedSeries())
+   //  networkSeries.dataFields.linkWith = "linkWith";
+   //  networkSeries.dataFields.name = "name";
+   //  networkSeries.dataFields.id = "name";
+   //  networkSeries.dataFields.value = "value";
+   //  networkSeries.dataFields.children = "children";
+    
+   //  networkSeries.nodes.template.label.text = "{name}"
+   //  networkSeries.fontSize = 8;
+   //  networkSeries.linkWithStrength = 0;
+    
+   //  var nodeTemplate = networkSeries.nodes.template;
+   //  nodeTemplate.tooltipText = "{name}";
+   //  nodeTemplate.fillOpacity = 1;
+   //  nodeTemplate.label.hideOversized = true;
+   //  nodeTemplate.label.truncate = true;
+    
+   //  var linkTemplate = networkSeries.links.template;
+   //  linkTemplate.strokeWidth = 1;
+   //  var linkHoverState = linkTemplate.states.create("hover");
+   //  linkHoverState.properties.strokeOpacity = 1;
+   //  linkHoverState.properties.strokeWidth = 2;
+    
+   //  nodeTemplate.events.on("over", function (event) {
+   //      var dataItem = event.target.dataItem;
+   //      dataItem.childLinks.each(function (link) {
+   //          link.isHover = true;
+   //      })
+   //  })
+    
+   //  nodeTemplate.events.on("out", function (event) {
+   //      var dataItem = event.target.dataItem;
+   //      dataItem.childLinks.each(function (link) {
+   //          link.isHover = false;
+   //      })
+   //  })
+    
+   //  networkSeries.data = [  
+   //     {  
+   //        "name":"Australia",
+   //        "value":1207,
+   //        "linkWith":[  
+   //           "Gunther"
+   //        ],
+   //        "children":[  
+   //           {  
+   //              "name":"Australian Securities Exchange",
+   //              "value":1139
+   //           },
+   //           {  
+   //              "name":"NZX Limited",
+   //              "value":68
+   //           }
+   //        ]
+   //     },
+   //     {  
+   //        "name":"Europe",
+   //        "value":13589,
+   //        "linkWith":[  
+   //           "North America",
+   //           "Asia",
+   //           "Middle East",
+   //           "Europe",
+   //           "South America"
+   //        ],
+   //        "children":[  
+   //           {  
+   //              "name":"Euronext",
+   //              "value":3379
+   //           },
+   //           {  
+   //              "name":"London Stock Exchange",
+   //              "value":3272
+   //           },
+   //           {  
+   //              "name":"Deutsche Boerse",
+   //              "value":1738
+   //           },
+   //           {  
+   //              "name":"SIX Swiss Exchange",
+   //              "value":1479
+   //           },
+   //           {  
+   //              "name":"NASDAQ OMX Nordic Exchange",
+   //              "value":1253
+   //           },
+   //           {  
+   //              "name":"BME Spanish Exchange",
+   //              "value":833
+   //           },
+   //           {  
+   //              "name":"Borsa Italia",
+   //              "value":653
+   //           },
+   //           {  
+   //              "name":"Moscow Exchange",
+   //              "value":447
+   //           },
+   //           {  
+   //              "name":"Oslo Bors",
+   //              "value":201
+   //           },
+   //           {  
+   //              "name":"Irish Stock Exchange",
+   //              "value":134
+   //           },
+   //           {  
+   //              "name":"Wiener Börse",
+   //              "value":96
+   //           },
+   //           {  
+   //              "name":"Ljubljana",
+   //              "value":49
+   //           },
+   //           {  
+   //              "name":"Luxembourg Stock Exchange",
+   //              "value":49
+   //           },
+   //           {  
+   //              "name":"Athens Stock Exchange",
+   //              "value":27
+   //           },
+   //           {  
+   //              "name":"Budapest Stock Exchange",
+   //              "value":17
+   //           },
+   //           {  
+   //              "name":"Malta Stock Exchange",
+   //              "value":4
+   //           }
+   //        ]
+   //     },
+   //     {  
+   //        "name":"North America",
+   //        "value":28059,
+   //        "linkWith":[  
+   //           "Asia",
+   //           "Africa",
+   //           "Middle East",
+   //           "Europe",
+   //           "South America"
+   //        ],
+   //        "children":[  
+   //           {  
+   //              "name":"NYSE",
+   //              "value":18486
+   //           },
+   //           {  
+   //              "name":"NASDAQ",
+   //              "value":7449
+   //           },
+   //           {  
+   //              "name":"TMX",
+   //              "value":1697
+   //           },
+   //           {  
+   //              "name":"Bolsa Mexicana de Valores",
+   //              "value":426
+   //           },
+   //           {  
+   //              "name":"Bermuda Stock Exchange",
+   //              "value":1
+   //           }
+   //        ]
+   //     },
+   //     {  
+   //        "name":"Asia",
+   //        "value":23048,
+   //        "linkWith":[  
+   //           "North America",
+   //           "Africa",
+   //           "Middle East",
+   //           "Australia",
+   //           "Europe",
+   //           "South America"
+   //        ],
+   //        "children":[  
+   //           {  
+   //              "name":"Japan Exchange Group",
+   //              "value":4910
+   //           },
+   //           {  
+   //              "name":"Shanghai Stock Exchange",
+   //              "value":4460
+   //           },
+   //           {  
+   //              "name":"Shenzen Stock Exchange",
+   //              "value":3424
+   //           },
+   //           {  
+   //              "name":"Hong Kong Exchanges and Clearing",
+   //              "value":3165
+   //           },
+   //           {  
+   //              "name":"BSE India Limited",
+   //              "value":1482
+   //           },
+   //           {  
+   //              "name":"National Stock Exchange of India",
+   //              "value":1450
+   //           },
+   //           {  
+   //              "name":"Korea Exchange",
+   //              "value":1265
+   //           },
+   //           {  
+   //              "name":"Taiwan Stock Exchange Corp",
+   //              "value":750
+   //           },
+   //           {  
+   //              "name":"Singapore Exchange",
+   //              "value":639
+   //           },
+   //           {  
+   //              "name":"Bursa Malaysia",
+   //              "value":380
+   //           },
+   //           {  
+   //              "name":"Stock Exchange of Thailand",
+   //              "value":368
+   //           },
+   //           {  
+   //              "name":"Indonesia Stock Exchange",
+   //              "value":347
+   //           },
+   //           {  
+   //              "name":"Philippine Stock Exchange",
+   //              "value":238
+   //           },
+   //           {  
+   //              "name":"Taipei Exchange",
+   //              "value":82
+   //           },
+   //           {  
+   //              "name":"Ho Chi Minh Stock Exchange",
+   //              "value":50
+   //           },
+   //           {  
+   //              "name":"Kazakhstan Stock Exchange",
+   //              "value":39
+   //           },
+   //           {  
+   //              "name":"Colombo Stock Exchange",
+   //              "value":21
+   //           }
+   //        ]
+   //     },
+   //     {  
+   //        "name":"South America",
+   //        "value":933,
+   //        "linkWith":[  
+   //           "North America",
+   //           "Africa",
+   //           "Middle East",
+   //           "Australia",
+   //           "Europe"
+   //        ],
+   //        "children":[  
+   //           {  
+   //              "name":"BM&F Bovespa",
+   //              "value":519
+   //           },
+   //           {  
+   //              "name":"Bolsa de Comercia De Santiago",
+   //              "value":187
+   //           },
+   //           {  
+   //              "name":"Bolsa de Valores de Columbia",
+   //              "value":88
+   //           },
+   //           {  
+   //              "name":"Bolsa de Comercia de Buenos Aires",
+   //              "value":81
+   //           },
+   //           {  
+   //              "name":"Bolsa de Valores de Lima",
+   //              "value":58
+   //           }
+   //        ]
+   //     },
+   //     {  
+   //        "name":"Middle East",
+   //        "value":1410,
+   //        "linkWith":[  
+   //           "North America",
+   //           "Africa",
+   //           "Asia",
+   //           "South America",
+   //           "Australia",
+   //           "Europe"
+   //        ],
+   //        "children":[  
+   //           {  
+   //              "name":"Saudi Stock Exchange",
+   //              "value":442
+   //           },
+   //           {  
+   //              "name":"Tel-Aviv Stock Exchange",
+   //              "value":237
+   //           },
+   //           {  
+   //              "name":"Borsa Instanbul",
+   //              "value":197
+   //           },
+   //           {  
+   //              "name":"Qatar Stock Exchange",
+   //              "value":146
+   //           },
+   //           {  
+   //              "name":"Abu Dhabi Exchange",
+   //              "value":110
+   //           },
+   //           {  
+   //              "name":"Dubai Financial Market",
+   //              "value":87
+   //           },
+   //           {  
+   //              "name":"Muscat Securities Market",
+   //              "value":38
+   //           },
+   //           {  
+   //              "name":"Amman Stock Exchange",
+   //              "value":24
+   //           },
+   //           {  
+   //              "name":"Bahrain Bourse",
+   //              "value":20
+   //           }
+   //        ]
+   //     }
+   //  ];
+    
+    
+   //  }); // end am4core.ready()
+    </script>
+    <script src="js/amCharts/worldExchanges.js"></script>
+
+
+    <div id="worldExchangesdiv"></div>

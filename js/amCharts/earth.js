@@ -20,7 +20,7 @@ am4core.ready(function() {
     chart.padding(20,20,20,20);
 
     chart.isHidden = true
-    chart.opacity = 0.4
+    chart.opacity = 1
     
     // Create map polygon series
     var polygonSeries = chart.series.push(new am4maps.MapPolygonSeries());

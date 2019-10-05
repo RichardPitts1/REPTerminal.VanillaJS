@@ -1,10 +1,10 @@
 var typed = new Typed(".typing", {
     strings: [
         "Welcome!",
-        "Welcome to the uInvest Web App",
-        "Everything u Need to invest",
-        "Like a pro...",
-        "uInvest"
+        "Welcome to the REP Terminal",
+        "Everything you need to invest",
+        "In a web based interactive form",
+        "REP Terminal"
     ],
     typeSpeed: 10,
     backSpeed: 10,

@@ -14,7 +14,7 @@ am4core.ready(function() {
     networkSeries.dataFields.children = "children";
     
     networkSeries.nodes.template.label.text = "{name}"
-    networkSeries.fontSize = 8;
+    networkSeries.fontSize = 14;
     networkSeries.linkWithStrength = 0.01;
     
     var nodeTemplate = networkSeries.nodes.template;

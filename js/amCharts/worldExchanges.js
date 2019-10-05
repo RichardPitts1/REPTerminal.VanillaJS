@@ -15,19 +15,19 @@ am4core.ready(function() {
     
     networkSeries.nodes.template.label.text = "{name}"
     networkSeries.fontSize = 8;
-    networkSeries.linkWithStrength = 0;
+    networkSeries.linkWithStrength = 0.01;
     
     var nodeTemplate = networkSeries.nodes.template;
     nodeTemplate.tooltipText = "{name}: {value} billion";
     nodeTemplate.fillOpacity = 1;
-    nodeTemplate.label.hideOversized = false;
-    nodeTemplate.label.truncate = false;
+    nodeTemplate.label.hideOversized = true;
+    nodeTemplate.label.truncate = true;
     
     var linkTemplate = networkSeries.links.template;
     linkTemplate.strokeWidth = 1;
     var linkHoverState = linkTemplate.states.create("hover");
     linkHoverState.properties.strokeOpacity = 1;
-    linkHoverState.properties.strokeWidth = 2;
+    linkHoverState.properties.strokeWidth = 3;
     
     nodeTemplate.events.on("over", function (event) {
         var dataItem = event.target.dataItem;
@@ -48,7 +48,8 @@ am4core.ready(function() {
           "name":"Australia",
           "value":1207,
           "linkWith":[  
-             "Gunther"
+             "Africa",
+             "Asia"
           ],
           "children":[  
              {  
@@ -65,11 +66,9 @@ am4core.ready(function() {
           "name":"Europe",
           "value":13589,
           "linkWith":[  
-             "North America",
              "Asia",
              "Middle East",
-             "Europe",
-             "South America"
+             "Africa"
           ],
           "children":[  
              {  
@@ -142,11 +141,8 @@ am4core.ready(function() {
           "name":"North America",
           "value":28059,
           "linkWith":[  
-             "Asia",
-             "Africa",
-             "Middle East",
-             "Europe",
-             "South America"
+             "South America",
+             "Europe"
           ],
           "children":[  
              {  
@@ -175,12 +171,10 @@ am4core.ready(function() {
           "name":"Asia",
           "value":23048,
           "linkWith":[  
-             "North America",
              "Africa",
              "Middle East",
              "Australia",
-             "Europe",
-             "South America"
+             "Europe"
           ],
           "children":[  
              {  
@@ -257,11 +251,7 @@ am4core.ready(function() {
           "name":"South America",
           "value":933,
           "linkWith":[  
-             "North America",
-             "Africa",
-             "Middle East",
-             "Australia",
-             "Europe"
+             "North America"
           ],
           "children":[  
              {  
@@ -290,10 +280,8 @@ am4core.ready(function() {
           "name":"Middle East",
           "value":1410,
           "linkWith":[  
-             "North America",
              "Africa",
              "Asia",
-             "South America",
              "Australia",
              "Europe"
           ],

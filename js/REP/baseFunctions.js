@@ -32,9 +32,18 @@ function showExploding() {
     document.getElementById("clockChartdiv").style.display = "none"
     document.getElementById("stadiumChartdiv").style.display = "none"
     console.log(document.getElementById("earthView").style)
+    document.getElementById("america").style.display = "block"
     document.getElementById('ThreeDBarChartdiv').style.display = "block"
-    // console.log(chart)
     document.getElementById("explodingChartdiv").style.display = "block"
     document.getElementById("solidGuageChartdiv").style.display = "block"
+
+
+
+
+
+
+
+
+        // console.log(chart)
   }
 

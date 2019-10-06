@@ -2,6 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log("Yea")
+    runTyped2()
 })
 
 

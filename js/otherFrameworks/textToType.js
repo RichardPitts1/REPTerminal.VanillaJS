@@ -21,8 +21,8 @@ var typed2 = new Typed(".typing2", {
         "Annual performances shown below",
         "The S&P500 Terminal"
     ],
-    typeSpeed: 60,
-    backSpeed: 62.5,
+    typeSpeed: 120,
+    backSpeed: 125,
     backDelay: 1200,
     startDelay: 5500,
     loop: false

@@ -3791,7 +3791,7 @@ am4internal_webpackJsonp(["689e"], {
                         return this.getPropertyValue("expandDistance")
                     },
                     set: function(e) {
-                        this.setPropertyValue("expandDistance", e, !0)
+                        this.setPropertyValue("expandDistance", (1.4 * e), !0)
                     },
                     enumerable: !0,
                     configurable: !0
@@ -3872,6 +3872,13 @@ am4internal_webpackJsonp(["689e"], {
                 }), t
             }(dt.a);
         l.b.registeredClasses.FunnelTick = yt;
+
+
+
+
+
+
+        // And here is that data item
         var gt = function(e) {
                 function t() {
                     var t = e.call(this) || this;
@@ -3892,7 +3899,20 @@ am4internal_webpackJsonp(["689e"], {
                     configurable: !0
                 }), t
             }(ct.b),
-            // Here is the Funnel Series Information!!
+
+
+
+
+
+
+
+
+
+
+
+
+            
+            // Here is the Funnel Series Information!! REP
             ft = function(e) {
                 function t() {
                     var t = e.call(this) || this;
@@ -4051,7 +4071,7 @@ am4internal_webpackJsonp(["689e"], {
                         var t = this.labels.template,
                             i = "none",
                             n = "none";
-                        this.alignLabels ? e ? (this.labelsContainer.toFront(), "vertical" == this.orientation ? (this.ticks.template.locationX = 1, t.horizontalCenter = "left", i = "right") : (this.ticks.template.locationY = 1, t.horizontalCenter = "right", n = "bottom")) : (this.labelsContainer.toBack(), "vertical" == this.orientation ? (this.ticks.template.locationX = 0, i = "left") : (n = "top", this.ticks.template.locationY = 0)) : "vertical" == this.orientation ? i = "center" : n = "middle", t.align = i, t.valign = n, this.validateLayout(), this.ticks.each(function(e) {
+                        this.alignLabels ? e ? (this.labelsContainer.toFront(), "vertical" == this.orientation ? (this.ticks.template.locationX = 1, t.horizontalCenter = "left", i = "left") : (this.ticks.template.locationY = -1, t.horizontalCenter = "right", n = "bottom")) : (this.labelsContainer.toBack(), "vertical" == this.orientation ? (this.ticks.template.locationX = 0, i = "left") : (n = "top", this.ticks.template.locationY = 0)) : "vertical" == this.orientation ? i = "center" : n = "middle", t.align = i, t.valign = n, this.validateLayout(), this.ticks.each(function(e) {
                             e.invalidate()
                         }), this.invalidateDataItems()
                     },
@@ -4060,6 +4080,21 @@ am4internal_webpackJsonp(["689e"], {
                 }), t
             }(ct.a);
         l.b.registeredClasses.FunnelSeries = ft, l.b.registeredClasses.FunnelSeriesDataItem = gt;
+
+
+        // So here is the end of the Funnel Series Gig
+
+
+
+
+
+
+
+
+
+
+
+
         var mt = function(e) {
                 function t() {
                     var t = e.call(this) || this;

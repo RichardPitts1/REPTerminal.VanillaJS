@@ -2,7 +2,7 @@
 
 document.addEventListener('DOMContentLoaded', function() {
     console.log("Yea")
-    runTyped2()
+    am4core.useTheme(am4themes_animated);
 })
 
 
